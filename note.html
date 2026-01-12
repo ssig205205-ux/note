@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+
+
+
+
+        .container{
+      display: flex;
+      padding: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      margin-left:20px;
+      max-width: 1000px;
+      align-items: center;
+      border: 2px solid black;
+      height: 500px;
+      flex-direction: column;
+      box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
+     
+      
+      
+    }
+
+    .addbt{
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #28a745;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+    }   
+    .addbt:hover{
+        background-color: #218838;
+        opacity: 0.9;
+    }
+    .addbt:active{
+        transform: scale(0.95);
+        opacity: 0.8;
+
+    }
+
+  
+    .line{
+        width: 90%;
+        height: 2px;
+        background-color: black;
+        margin: 20px 0;
+    }
+    textarea{
+        width: 500px;
+        height: 200px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        resize: none;
+    }
+    .note-container{
+    
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+        height: 300px;
+        overflow-y: auto;
+        padding: 15px;
+        overflow-x: hidden;
+    
+        
+     
+        
+    }
+
+    .note-box{
+        gap: 10px;
+        width: 300px;
+        height: 30px;
+        background-color: #e9e9e9;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        padding-left: 10px;
+        transition: transform 0.1s;
+        margin: 0 10px;
+    }
+    .note-box:hover{
+        
+        transform: scale(1.1);
+    }
+    .delebt{
+        padding: 5px 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        background-color: #dc3545;
+        color: white;
+        cursor: pointer;
+        margin-right: 2px;
+    }
+    .delebt:hover{
+        background-color: #c82333;
+        opacity: 0.9;
+    }
+    .delebt:active{
+        transform: scale(0.95);
+        opacity: 0.8;
+
+    }
+    .btcontainer{
+        display: flex;
+        gap: 10px;
+        margin-left: 5px;
+    }
+    .titleBox{
+       
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        
+        font-size: 16px;
+        font-weight: bold;
+    }
+   
+    
+    .savebt, .deletebt,.closebt{
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+     
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .savebt{
+        background-color: #00ff2a;
+    }
+    .deletebt{
+        background-color: #dc3545;
+    }
+    .closebt{
+        background-color: orange;
+    }
+    .savebt:hover{
+        background-color: #00cc22;
+        opacity: 0.9;
+    }
+    .deletebt:hover{
+        background-color: #c82333;
+        opacity: 0.9;
+    }
+    .closebt:hover{
+        background-color: #e69500;
+        opacity: 0.9;
+    }
+    .savebt:active, .deletebt:active,.closebt:active{
+        transform: scale(0.95);
+        opacity: 0.8;
+
+    }
+
+ 
+
+/* Mobile */
+
+
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h1>Note Taking App</h1>
+        <button class="addbt" id="addbt">Add Note</button>
+        <div class="line"></div>
+
+
+        <div class="note-container" id="noteContainer">
+       
+        </div>
+    </div>
+    <script src="mainFunction.js"></script>
+</body>
+</html>
